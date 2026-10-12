@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Metropolitan Spring Hill | Boutique Hotel Stay in Brisbane CBD</title>
+  <title>The Metropolitan Spring Hill | Hotel Accommodation near Brisbane CBD</title>
   <meta name="description" content="Stay at The Metropolitan Spring Hill, 106 Leichhardt Street, Brisbane. Comfortable air-conditioned rooms, on-site parking, 24/7 reception and a free city bus at the door. Book direct for the best rate.">
   <link rel="canonical" href="https://www.metropolitanspringhill.com.au/">
   <meta name="theme-color" content="#14213d">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The Metropolitan Spring Hill, Brisbane">
-  <meta property="og:description" content="Relaxed, central accommodation on the edge of Brisbane's CBD. Book direct for the best rate.">
+  <meta property="og:site_name" content="The Metropolitan Spring Hill">
+  <meta property="og:title" content="The Metropolitan Spring Hill | Hotel Accommodation near Brisbane CBD">
+  <meta property="og:description" content="Stay at The Metropolitan Spring Hill, 106 Leichhardt Street, Brisbane. Comfortable air-conditioned rooms, on-site parking, 24/7 reception and a free city bus at the door. Book direct for the best rate.">
   <meta property="og:url" content="https://www.metropolitanspringhill.com.au/">
   <meta property="og:image" content="https://www.metropolitanspringhill.com.au/img/hero.jpg">
 
@@ -20,8 +20,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-
-  <!-- Structured data: helps Google show address, phone and check-in times -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,10 +52,9 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ============ Header ============ -->
-  <header class="site-header" id="top">
+  <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="The Metropolitan Spring Hill, home">
+      <a class="brand" href="index.html" aria-label="The Metropolitan Spring Hill, home">
         <span class="brand-mark" aria-hidden="true">M</span>
         <span class="brand-text">
           <strong>The Metropolitan</strong>
@@ -72,21 +69,21 @@
 
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
-          <li><a href="#rooms">Rooms</a></li>
-          <li><a href="#amenities">Facilities</a></li>
-          <li><a href="#location">Location</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
         <a class="nav-phone" href="tel:+61738316000">(07) 3831 6000</a>
-        <a class="btn btn-accent" href="#book">Book direct</a>
+        <a class="btn btn-accent" href="book.html">Book direct</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
 
-    <!-- ============ Hero ============ -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-media" role="img" aria-label="The Metropolitan Spring Hill at dusk"></div>
       <div class="container hero-content">
@@ -95,12 +92,11 @@
         <p class="lead">Comfortable, good-value rooms on a leafy Spring Hill street, a short walk from Roma Street Parkland and the heart of the city.</p>
         <div class="hero-actions">
           <a class="btn btn-accent btn-lg" href="#book">Check availability</a>
-          <a class="btn btn-ghost btn-lg" href="#rooms">View rooms</a>
+          <a class="btn btn-ghost btn-lg" href="rooms.html">View rooms</a>
         </div>
       </div>
-
-      <!-- Booking bar -->
-      <form class="booking-bar container" id="book" aria-label="Check availability" novalidate>
+      <div class="container">
+      <form class="booking-bar booking-form" id="book" aria-label="Check availability" novalidate>
         <div class="field">
           <label for="checkin">Check in</label>
           <input type="date" id="checkin" name="checkin" required>
@@ -122,9 +118,9 @@
         <p class="booking-note">Best rate guaranteed when you book direct.</p>
         <p class="form-error" role="alert" hidden></p>
       </form>
+      </div>
     </section>
 
-    <!-- ============ Highlights ============ -->
     <section class="highlights" aria-label="Highlights">
       <div class="container highlights-grid">
         <div class="highlight">
@@ -146,7 +142,6 @@
       </div>
     </section>
 
-    <!-- ============ About ============ -->
     <section class="section about" aria-labelledby="about-title">
       <div class="container split">
         <div class="split-media">
@@ -167,83 +162,80 @@
             <li>Rooftop terrace with city views</li>
             <li>Free city loop bus stops at the door</li>
           </ul>
+          <a class="btn btn-primary" href="facilities.html">Explore our facilities</a>
         </div>
       </div>
     </section>
 
-    <!-- ============ Rooms ============ -->
-    <!-- NOTE: room names, bed sizes and "from" prices below are placeholders.
-         Update them to match the rooms in your booking system. -->
-    <section class="section rooms" id="rooms" aria-labelledby="rooms-title">
+    <section class="section rooms" aria-labelledby="rooms-title">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Accommodation</p>
           <h2 id="rooms-title">Rooms for every kind of stay</h2>
           <p>Every room includes air-conditioning, a private ensuite with shower, flat-screen TV, and tea and coffee making facilities.</p>
         </div>
-
         <div class="room-grid">
           <article class="room-card">
-            <div class="photo photo-room-1" role="img" aria-label="Queen room"></div>
+            
+            <div class="photo photo-room-1" role="img" aria-label="Queen Room"></div>
             <div class="room-body">
               <h3>Queen Room</h3>
               <p class="room-meta">1 queen bed · Sleeps 2</p>
               <p>A comfortable, well-priced room for couples and solo travellers.</p>
-              <ul class="chips"><li>Ensuite</li><li>Air-con</li><li>TV</li></ul>
+              <ul class="chips"><li>Private ensuite with shower</li><li>Air-conditioning</li><li>Flat-screen TV</li></ul>
               <div class="room-foot">
                 <span class="price">From <strong>$170</strong><small>/night</small></span>
-                <a class="btn btn-primary btn-sm" href="#book" data-room="Queen Room">Book</a>
+                <a class="btn btn-primary btn-sm" href="rooms.html#queen">Details</a>
               </div>
             </div>
           </article>
-
           <article class="room-card">
-            <div class="photo photo-room-2" role="img" aria-label="Twin room"></div>
+            
+            <div class="photo photo-room-2" role="img" aria-label="Twin Room"></div>
             <div class="room-body">
               <h3>Twin Room</h3>
               <p class="room-meta">2 single beds · Sleeps 2</p>
               <p>Ideal for friends, colleagues or anyone who prefers their own bed.</p>
-              <ul class="chips"><li>Ensuite</li><li>Air-con</li><li>TV</li></ul>
+              <ul class="chips"><li>Private ensuite with shower</li><li>Air-conditioning</li><li>Flat-screen TV</li></ul>
               <div class="room-foot">
                 <span class="price">From <strong>$170</strong><small>/night</small></span>
-                <a class="btn btn-primary btn-sm" href="#book" data-room="Twin Room">Book</a>
+                <a class="btn btn-primary btn-sm" href="rooms.html#twin">Details</a>
               </div>
             </div>
           </article>
-
           <article class="room-card featured">
             <span class="badge">Most popular</span>
-            <div class="photo photo-room-3" role="img" aria-label="Queen room with balcony"></div>
+            <div class="photo photo-room-3" role="img" aria-label="Queen with Balcony"></div>
             <div class="room-body">
               <h3>Queen with Balcony</h3>
               <p class="room-meta">1 queen bed · Sleeps 2</p>
               <p>Step outside onto your own balcony and enjoy the Brisbane evening air.</p>
-              <ul class="chips"><li>Balcony</li><li>Ensuite</li><li>Air-con</li></ul>
+              <ul class="chips"><li>Private balcony</li><li>Private ensuite with shower</li><li>Air-conditioning</li></ul>
               <div class="room-foot">
                 <span class="price">From <strong>$190</strong><small>/night</small></span>
-                <a class="btn btn-primary btn-sm" href="#book" data-room="Queen with Balcony">Book</a>
+                <a class="btn btn-primary btn-sm" href="rooms.html#balcony">Details</a>
               </div>
             </div>
           </article>
-
           <article class="room-card">
-            <div class="photo photo-room-4" role="img" aria-label="Family room"></div>
+            
+            <div class="photo photo-room-4" role="img" aria-label="Family Room"></div>
             <div class="room-body">
               <h3>Family Room</h3>
               <p class="room-meta">1 queen + 2 singles · Sleeps 4</p>
               <p>Space for the whole family, close to the city's parks and museums.</p>
-              <ul class="chips"><li>Ensuite</li><li>Air-con</li><li>TV</li></ul>
+              <ul class="chips"><li>Sleeps up to 4</li><li>Private ensuite with shower</li><li>Air-conditioning</li></ul>
               <div class="room-foot">
                 <span class="price">From <strong>$220</strong><small>/night</small></span>
-                <a class="btn btn-primary btn-sm" href="#book" data-room="Family Room">Book</a>
+                <a class="btn btn-primary btn-sm" href="rooms.html#family">Details</a>
               </div>
             </div>
           </article>
         </div>
+        <p class="center"><a class="btn btn-primary" href="rooms.html">Compare all rooms</a></p>
       </div>
     </section>
 
-    <!-- ============ Direct booking benefits ============ -->
     <section class="direct" aria-labelledby="direct-title">
       <div class="container direct-inner">
         <div>
@@ -258,34 +250,12 @@
       </div>
     </section>
 
-    <!-- ============ Amenities ============ -->
-    <section class="section amenities" id="amenities" aria-labelledby="amenities-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Facilities</p>
-          <h2 id="amenities-title">Everything you need, nothing you don't</h2>
-        </div>
-        <ul class="amenity-grid">
-          <li><span class="ico" aria-hidden="true">🕑</span><strong>24/7 front desk</strong><span>Late arrivals are never a problem.</span></li>
-          <li><span class="ico" aria-hidden="true">🚗</span><strong>On-site parking</strong><span>Limited spaces, first come first served.</span></li>
-          <li><span class="ico" aria-hidden="true">🌇</span><strong>Rooftop terrace</strong><span>Unwind with views over the city.</span></li>
-          <li><span class="ico" aria-hidden="true">☕</span><strong>Café</strong><span>Grab a coffee before you head out.</span></li>
-          <li><span class="ico" aria-hidden="true">🛗</span><strong>Lift access</strong><span>Easy for luggage and all mobility needs.</span></li>
-          <li><span class="ico" aria-hidden="true">🧳</span><strong>Luggage storage</strong><span>Explore before check-in or after check-out.</span></li>
-          <li><span class="ico" aria-hidden="true">👔</span><strong>Dry cleaning</strong><span>Look sharp for meetings and events.</span></li>
-          <li><span class="ico" aria-hidden="true">📶</span><strong>Wi-Fi</strong><span>Stay connected throughout your stay.</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ Location ============ -->
-    <section class="section location" id="location" aria-labelledby="location-title">
+    <section class="section location" aria-labelledby="location-title">
       <div class="container split split-reverse">
         <div class="split-copy">
           <p class="eyebrow">Location</p>
           <h2 id="location-title">Minutes from everything</h2>
           <p>106 Leichhardt Street puts you on the quiet side of the city with Brisbane's best sights an easy walk or short ride away.</p>
-          <!-- Travel times are approximate; adjust as needed. -->
           <ul class="nearby">
             <li><span>Roma Street Parkland</span><em>~5 min walk</em></li>
             <li><span>Roma Street Station</span><em>~10 min walk</em></li>
@@ -295,95 +265,36 @@
             <li><span>South Bank</span><em>~10 min drive</em></li>
             <li><span>Brisbane Airport</span><em>~20 min drive</em></li>
           </ul>
-          <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=106+Leichhardt+Street+Spring+Hill+QLD+4000" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn btn-primary" href="location.html">Getting here &amp; things to do</a>
         </div>
-        <div class="map-wrap">
-          <iframe
-            title="Map showing The Metropolitan Spring Hill"
-            src="https://www.google.com/maps?q=106+Leichhardt+Street,+Spring+Hill+QLD+4000&amp;output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ FAQ ============ -->
-    <section class="section faq" id="faq" aria-labelledby="faq-title">
-      <div class="container narrow">
-        <div class="section-head">
-          <p class="eyebrow">Good to know</p>
-          <h2 id="faq-title">Frequently asked questions</h2>
-        </div>
-        <details>
-          <summary>What are the check-in and check-out times?</summary>
-          <p>Check-in is from 2:00 pm and check-out is by 10:00 am. Reception is open 24 hours, so late arrivals are welcome. Ask us about early check-in or late check-out; we'll do our best depending on availability.</p>
-        </details>
-        <details>
-          <summary>Is parking available?</summary>
-          <p>Yes, we have on-site parking. Spaces are limited and offered subject to availability, so please mention it when you book.</p>
-        </details>
-        <details>
-          <summary>How do I get to the city?</summary>
-          <p>The free city loop bus stops right outside the hotel. You can also walk to the CBD through Roma Street Parkland in around 15 minutes.</p>
-        </details>
-        <details>
-          <summary>Can I store my luggage?</summary>
-          <p>Yes. Leave your bags with reception before check-in or after check-out and enjoy the rest of your day in Brisbane.</p>
-        </details>
-        <details>
-          <summary>Do you have rooms with a balcony?</summary>
-          <p>Yes, selected rooms have a private balcony. Choose the "Queen with Balcony" room when booking, or call us to request one.</p>
-        </details>
-      </div>
-    </section>
-
-    <!-- ============ Contact ============ -->
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <div class="container split">
-        <div class="split-copy">
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">We're here to help</h2>
-          <p>Questions about a booking, group stays or corporate rates? Get in touch and our team will get back to you quickly.</p>
-          <dl class="contact-list">
-            <div><dt>Phone</dt><dd><a href="tel:+61738316000">(07) 3831 6000</a></dd></div>
-            <!-- TODO: confirm the reservations email address -->
-            <div><dt>Email</dt><dd><a href="mailto:stay@metropolitanspringhill.com.au">stay@metropolitanspringhill.com.au</a></dd></div>
-            <div><dt>Address</dt><dd>106 Leichhardt Street<br>Spring Hill QLD 4000</dd></div>
-            <div><dt>Reception</dt><dd>Open 24 hours, 7 days</dd></div>
-          </dl>
-        </div>
-
-        <form class="contact-form" id="contact-form" novalidate>
-          <div class="form-row">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-            </div>
+          <div class="map-wrap">
+            <iframe
+              title="Map showing The Metropolitan Spring Hill"
+              src="https://www.google.com/maps?q=106+Leichhardt+Street,+Spring+Hill+QLD+4000&amp;output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <div class="field">
-            <label for="phone">Phone <span class="optional">(optional)</span></label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel">
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button class="btn btn-primary" type="submit">Send enquiry</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
       </div>
     </section>
   </main>
 
-  <!-- ============ Footer ============ -->
+  <section class="cta-band" aria-label="Book your stay">
+    <div class="container cta-inner">
+      <div>
+        <h2>Ready to stay in Spring Hill?</h2>
+        <p>Book direct for our best rate, or call the front desk any time.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-accent btn-lg" href="book.html">Check availability</a>
+        <a class="btn btn-ghost btn-lg" href="tel:+61738316000">Call (07) 3831 6000</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <a class="brand brand-light" href="#top">
+        <a class="brand brand-light" href="index.html">
           <span class="brand-mark" aria-hidden="true">M</span>
           <span class="brand-text"><strong>The Metropolitan</strong><small>Spring Hill · Brisbane</small></span>
         </a>
@@ -392,31 +303,34 @@
       <div>
         <h3>Visit</h3>
         <p>106 Leichhardt Street<br>Spring Hill QLD 4000</p>
+        <p>Check-in from 2:00 pm<br>Check-out by 10:00 am</p>
       </div>
       <div>
         <h3>Contact</h3>
         <p><a href="tel:+61738316000">(07) 3831 6000</a><br><a href="mailto:stay@metropolitanspringhill.com.au">stay@metropolitanspringhill.com.au</a></p>
+        <p>Reception open 24/7</p>
       </div>
       <div>
         <h3>Explore</h3>
         <ul>
-          <li><a href="#rooms">Rooms</a></li>
-          <li><a href="#amenities">Facilities</a></li>
-          <li><a href="#location">Location</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="book.html">Book direct</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© <span id="year">2026</span> The Metropolitan Spring Hill. All rights reserved.</p>
-      <a href="#top">Back to top ↑</a>
+      <p>© <span class="year">2026</span> The Metropolitan Spring Hill. All rights reserved.</p>
+      <a href="#main">Back to top ↑</a>
     </div>
   </footer>
 
-  <!-- Sticky mobile call / book bar -->
   <div class="mobile-cta" aria-label="Quick actions">
     <a class="btn btn-ghost-dark" href="tel:+61738316000">Call</a>
-    <a class="btn btn-accent" href="#book">Book direct</a>
+    <a class="btn btn-accent" href="book.html">Book direct</a>
   </div>
 
   <script src="js/main.js" defer></script>

@@ -137,6 +137,10 @@ p { margin: 0 0 1em; }
 .photo-room-2 { background-image: url("../img/room-twin.jpg"), linear-gradient(135deg, #b7c4d6, #6f84a3); }
 .photo-room-3 { background-image: url("../img/room-balcony.jpg"), linear-gradient(135deg, #e8c18f, #b9824a); }
 .photo-room-4 { background-image: url("../img/room-family.jpg"), linear-gradient(135deg, #c3d1bf, #7e977a); }
+.photo-rooftop  { background-image: url("../img/rooftop.jpg"), linear-gradient(135deg, #f0b77a, #5a6f9e); }
+.photo-parking  { background-image: url("../img/parking.jpg"), linear-gradient(135deg, #a9b2bf, #4d5868); }
+.photo-location { background-image: url("../img/spring-hill.jpg"), linear-gradient(135deg, #9fc0a6, #3c6b5b); }
+.photo-hero     { background-image: url("../img/hero.jpg"), radial-gradient(120% 90% at 80% 10%, #3b5a8c 0%, #14213d 60%); }
 
 /* ---------- Hero ---------- */
 .hero { position: relative; isolation: isolate; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; color: #fff; padding-top: var(--header-h); }
@@ -180,8 +184,6 @@ p { margin: 0 0 1em; }
 .section-head p:last-child { color: var(--muted); }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
-.split-reverse .split-copy { order: 1; }
-.split-reverse .map-wrap { order: 2; }
 .split-media { position: relative; }
 .photo-about { aspect-ratio: 4 / 5; border-radius: var(--radius); box-shadow: var(--shadow); }
 .rating-card {
@@ -287,6 +289,85 @@ p { margin: 0 0 1em; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid rgba(255,255,255,.12); margin-top: 48px; padding-top: 20px; font-size: .85rem; }
 .footer-bottom p { margin: 0; }
 
+/* ---------- Current page in nav ---------- */
+.site-nav ul a[aria-current="page"] { color: var(--accent-dark); }
+.site-header:not(.scrolled):not(.menu-open) .site-nav ul a[aria-current="page"] { color: var(--accent); }
+.site-nav ul a[aria-current="page"]::after { transform: scaleX(1); }
+
+/* ---------- Inner page hero ---------- */
+.page-hero {
+  position: relative; isolation: isolate; color: #fff; background: var(--navy);
+  padding: calc(var(--header-h) + clamp(56px, 9vw, 110px)) 0 clamp(48px, 7vw, 84px);
+}
+.page-hero { overflow: hidden; }
+.page-hero-media { position: absolute; inset: 0; z-index: -1; background-size: cover; background-position: center; opacity: .35; aspect-ratio: auto; border-radius: 0; box-shadow: none; }
+.page-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(20,33,61,.4), rgba(20,33,61,.85)); }
+.page-hero h1 { color: #fff; font-size: clamp(2.3rem, 5vw, 3.6rem); max-width: 820px; }
+.page-hero .eyebrow { color: var(--accent); }
+.page-hero .lead { font-size: 1.15rem; max-width: 620px; opacity: .9; margin: 0; }
+
+.center { text-align: center; margin-top: 40px; }
+.split + .split { margin-top: clamp(48px, 7vw, 96px); }
+.split-copy .btn { margin-top: 12px; }
+
+/* ---------- Rooms page ---------- */
+.included { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 32px; text-align: center; }
+.included h2 { font-size: 1.5rem; }
+.included-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 28px; }
+.room-jump { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 32px 0 56px; }
+.room-jump a { text-decoration: none; padding: .5em 1.1em; border-radius: 999px; border: 1.5px solid var(--navy); color: var(--navy); font-weight: 500; font-size: .92rem; }
+.room-jump a:hover { background: var(--navy); color: #fff; }
+.room-detail { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; scroll-margin-top: calc(var(--header-h) + 24px); }
+.room-detail + .room-detail { margin-top: clamp(56px, 8vw, 100px); }
+.room-detail-flip .room-detail-media { order: 2; }
+.room-detail-media { position: relative; }
+.room-detail-media .photo { aspect-ratio: 4 / 3; border-radius: var(--radius); box-shadow: var(--shadow); }
+.room-detail-foot { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 28px; }
+.ticks-2col { grid-template-columns: 1fr 1fr; }
+
+/* ---------- Facilities / info ---------- */
+.feature-rows { background: #fff; }
+.feature-photo { aspect-ratio: 4 / 3; border-radius: var(--radius); box-shadow: var(--shadow); }
+.info-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.info-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+.info-card .ico { font-size: 1.6rem; display: block; margin-bottom: 10px; }
+.info-card h3 { font-size: 1.15rem; }
+.info-card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.getting-here { background: var(--sand); }
+
+.things-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.thing { background: #fff; border-radius: var(--radius); padding: 26px; border-top: 4px solid var(--accent); box-shadow: 0 4px 14px rgba(20,33,61,.05); }
+.thing p { margin: 0; color: var(--muted); }
+
+/* ---------- FAQ page ---------- */
+.faq-group { font-size: 1.4rem; margin: 40px 0 16px; }
+.faq-group:first-child { margin-top: 0; }
+.faq details a { color: var(--navy); }
+.faq-more { text-align: center; margin-top: 48px; padding: 32px; background: var(--sand); border-radius: var(--radius); }
+.faq-more p { font-family: var(--font-display); font-size: 1.4rem; color: var(--navy); }
+
+/* ---------- Book page ---------- */
+.book-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 32px; align-items: start; }
+.booking-inline { margin: 0; grid-template-columns: 1fr 1fr; box-shadow: var(--shadow); border: 1px solid var(--line); }
+.booking-inline .field-room, .booking-inline button { grid-column: 1 / -1; }
+.booking-inline .field:nth-child(3) { grid-column: auto; }
+.book-help { margin-top: 20px; color: var(--muted); }
+.book-help a { color: var(--navy); font-weight: 600; }
+.book-side { background: var(--navy); color: #fff; border-radius: var(--radius); padding: 32px; }
+.book-side h2 { color: #fff; font-size: 1.6rem; }
+.book-times { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.15); }
+.book-times strong { display: block; color: var(--accent); }
+.book-times span { opacity: .85; }
+
+/* ---------- Call-to-action band ---------- */
+.cta-band { background: var(--sand); padding: 56px 0; border-top: 1px solid var(--line); }
+.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.cta-inner h2 { margin-bottom: .2em; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.cta-inner p { margin: 0; color: var(--muted); }
+.cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.cta-band .btn-ghost { border-color: var(--navy); color: var(--navy); }
+.cta-band .btn-ghost:hover { background: #fff; }
+
 /* ---------- Mobile CTA ---------- */
 .mobile-cta { display: none; }
 
@@ -302,6 +383,9 @@ p { margin: 0 0 1em; }
   .highlights-grid { grid-template-columns: repeat(2, 1fr); }
   .direct-inner { grid-template-columns: 1fr; }
   .nav-phone { display: none; }
+  .info-cards { grid-template-columns: repeat(2, 1fr); }
+  .things-grid { grid-template-columns: repeat(2, 1fr); }
+  .site-nav ul { gap: 18px; }
 }
 
 @media (max-width: 900px) {
@@ -325,10 +409,11 @@ p { margin: 0 0 1em; }
   .booking-bar button { grid-column: 1 / -1; }
 
   .split, .split-reverse { grid-template-columns: 1fr; }
-  .split-reverse .map-wrap { order: 2; }
   .rating-card { right: 12px; }
   .direct-list { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .room-detail, .book-grid { grid-template-columns: 1fr; }
+  .room-detail-flip .room-detail-media { order: 0; }
 
   .mobile-cta {
     display: grid; grid-template-columns: 1fr 2fr; gap: 10px; position: fixed; inset: auto 0 0; z-index: 90;
@@ -339,7 +424,8 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 600px) {
   body { font-size: 16px; }
-  .room-grid, .amenity-grid, .highlights-grid, .form-row, .footer-grid { grid-template-columns: 1fr; }
+  .room-grid, .amenity-grid, .highlights-grid, .form-row, .footer-grid,
+  .info-cards, .things-grid, .ticks-2col, .booking-inline { grid-template-columns: 1fr; }
   .hero-content { padding: 8vh 0 120px; }
   .booking-bar { grid-template-columns: 1fr; padding: 18px; }
   .footer-bottom { flex-direction: column; }
